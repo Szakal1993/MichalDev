@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Michał Bednarczyk | Front-End Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="wrapper">
+
+            <div class="nav__items">
+
+                <a class="nav__logo" href="#">
+                    <i class="bi bi-palette2 nav__logo-icon"></i>
+                    <p>MichalDev</p>
+                </a>
+
+                <div class="nav__links">
+
+                    <a class="link" href="#omnie">O mnie</a>
+                    <a class="link" href="#skills">Umiejętności</a>
+                    <a class="link" href="#projects">Projekty</a>
+                    <a class="link" href="#technologie">Technologie</a>
+                    <a class="link" href="#contact">Kontakt</a>
+
+                </div>
+                <i class="bi bi-list nav__icon"></i>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <header class="hero">
+
+        <div class="hero__bg">
+            <div class="hero__text">
+                <h1 data-aos="fade-up" data-aos-delay="200">Michał Bednarczyk</h1>
+                <h2 data-aos="fade-up" data-aos-delay="300">Front-End Developer</h2>
+                <p data-aos="fade-up" data-aos-delay="400">Tworzę nowoczesne i responsywne strony internetowe.</p>
+
+                <div class="hero__shadow"></div>
+
+            </div>
+            <a href="#omnie" class="hero__arrow"><i class="bi bi-arrow-down-circle"></i></a>
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="section" id="omnie">
+            <h2 class="section__title">O mnie</h2>
+            <div class="wrapper section__all">
+                <div class="section__card">
+                    <div class="card-text">
+                        <h3>Cześć! Jestem Michał 👋</h3>
+
+                        <p>
+                            Tworzę nowoczesne i responsywne strony internetowe.
+                            Interesuję się front-endem i rozwijam swoje umiejętności
+                            w HTML, CSS, JavaScript oraz innych technologiach webowych.
+                        </p>
+
+                    </div>
+                    <div class="card-img"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="skills" class="section__skills">
+            <h2 class="section__title">Umiejetnosci</h2>
+            <div class="section__skills-all">
+                <div class="wrapper">
+                    <div class="section__cards">
+                        <div class="cards-skills" data-aos="flip-left">
+                            <i class="bi bi-css"></i>
+                            <p>Projektuję nowoczesne interfejsy, animacje oraz responsywne układy dopasowane do różnych
+                                rozmiarów ekranów.</p>
+                        </div>
+                        <div class="cards-skills" data-aos="flip-left">
+                            <i class="bi bi-filetype-html"></i>
+                            <p>Tworzę przejrzystą i semantyczną strukturę stron internetowych, dbając o poprawną
+                                organizację
+                                treści.</p>
+                        </div>
+                        <div class="cards-skills" data-aos="flip-left">
+                            <i class="bi bi-javascript"></i>
+                            <p>Dodaję interaktywność do stron, tworzę funkcjonalne menu, animacje oraz dynamiczne
+                                elementy.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section__bg"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2 class="section__title">Projekty</h2>
+            <div class="wrapper project-center">
+                <div class="sect__projects">
+                    <div class="sect__card">
+                        <div class="sect__img1"></div>
+                        <div class="sect__text">
+                            <h2>AutoSerwis  strona internetowa warsztatu samochodowego</h2>
+                            <p>Responsywna strona internetowa stworzona dla warsztatu samochodowego. Projekt skupia się na przejrzystej prezentacji usług, nowoczesnym wyglądzie oraz wygodnej nawigacji na urządzeniach mobilnych.</p>
+                        </div>
+                        <div class="sect__btn">
+                            <a target="_blank" href="https://szakal1993.github.io/autoserwis/" ><button>AutoSerwis</button></a>
+                            <p>Zobacz na GitHub</p>
+                        </div>
+                    </div>
+                    <div class="sect__card">
+                        <div class="sect__img2"></div>
+                        <div class="sect__text">
+                            <h2>Portfolio - Michał Bednarczyk</h2>
+                            <p>Moja własna strona portfolio, stworzona w celu zaprezentowania moich umiejętności oraz projektów związanych z tworzeniem stron internetowych. Projekt został zaprojektowany z naciskiem na prosty, nowoczesny wygląd, responsywność oraz wygodną nawigację.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="technologies" id="technologie">
+    <h2 class="section__title">Technologie</h2>
+
+    <div class="wrapper technologies__cards">
+
+        <div class="technology-card" data-aos="zoom-in">
+            <i class="bi bi-filetype-html"></i>
+            <h3>HTML5</h3>
+            <p>Tworzenie semantycznej struktury stron.</p>
+        </div>
+
+        <div class="technology-card" data-aos="zoom-in">
+            <i class="bi bi-filetype-css"></i>
+            <h3>CSS3</h3>
+            <p>Stylowanie i tworzenie responsywnych interfejsów.</p>
+        </div>
+
+        <div class="technology-card" data-aos="zoom-in">
+            <i class="bi bi-filetype-scss"></i>
+            <h3>SCSS</h3>
+            <p>Organizacja i wygodne zarządzanie stylami.</p>
+        </div>
+
+        <div class="technology-card" data-aos="zoom-in">
+            <i class="bi bi-filetype-js"></i>
+            <h3>JavaScript</h3>
+            <p>Dodawanie interakcji i funkcjonalności.</p>
+        </div>
+
+        <div class="technology-card" data-aos="zoom-in">
+            <i class="bi bi-bootstrap"></i>
+            <h3>Bootstrap</h3>
+            <p>Tworzenie responsywnych komponentów.</p>
+        </div>
+
+        <div class="technology-card" data-aos="zoom-in">
+            <i class="bi bi-git"></i>
+            <h3>Git</h3>
+            <p>Kontrola wersji i zarządzanie projektami.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="section__title">Kontakt</h2>
+
+    <div class="wrapper contact__content">
+
+        <form class="contact__form">
+
+            <div class="form__group">
+                <label for="name">Imię</label>
+                <input type="text" id="name" name="name" placeholder="Twoje imię">
+            </div>
+
+            <div class="form__group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Twój e-mail">
+            </div>
+
+            <div class="form__group">
+                <label for="message">Wiadomość</label>
+                <textarea id="message" name="message" placeholder="Napisz wiadomość..."></textarea>
+            </div>
+
+            <button type="submit">Wyślij wiadomość</button>
+
+        </form>
+
+
+        <div class="contact__info">
+
+            <h3>Skontaktuj się ze mną</h3>
+
+            <p>
+                Masz pytanie lub chcesz porozmawiać o projekcie?
+                Napisz do mnie!
+            </p>
+
+            <a href="mailto:twojemail@gmail.com">
+                <i class="bi bi-envelope"></i>
+                michal199308@gmail.com
+            </a>
+
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-github"></i>
+                GitHub
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100002409018331" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-facebook"></i>
+                facebook
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+<div class="footer-container"> <p>&copy <span id="year"></span> | Michał Bednarczyk | Front-End Developer</p></div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/settings.js"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

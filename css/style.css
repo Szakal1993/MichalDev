@@ -1,0 +1,621 @@
+@keyframes colorChange {
+  0%, 100% {
+    color: white;
+  }
+  50% {
+    color: rgb(105, 105, 211);
+  }
+}
+html {
+  font-size: 62.5%;
+  scroll-padding-top: 60px;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(34, 27, 27);
+  overflow-x: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section__title {
+  color: rgb(105, 105, 211);
+  font-size: 2.6rem;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+.nav__items {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.nav__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.nav__logo p {
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: white;
+}
+.nav__logo-icon {
+  font-size: 3.5rem;
+  color: rgb(105, 105, 211);
+  padding: 10px;
+}
+.nav__links {
+  display: none;
+}
+.nav__links.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+}
+.nav__links .link {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: color 0.3s;
+  text-align: center;
+}
+.nav__links .link:hover {
+  color: rgb(105, 105, 211);
+}
+.nav__links .link.active-link {
+  color: rgb(105, 105, 211);
+}
+.nav__icon {
+  font-size: 30px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.hero__shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.hero__arrow {
+  position: absolute;
+  bottom: 10px;
+  color: white;
+  font-size: 36px;
+  padding: 20px;
+  animation: colorChange 5s ease-in-out infinite;
+  z-index: 4;
+}
+.hero__bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/pixelcreatures-design-1210160_640.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  z-index: 0;
+}
+.hero__bg .hero__text {
+  z-index: 4;
+}
+.hero__bg .hero__text h1 {
+  color: white;
+  font-size: 2.6rem;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+.hero__bg .hero__text h2 {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+.hero__bg .hero__text p {
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+.section {
+  text-align: center;
+}
+.section__all {
+  display: flex;
+  justify-content: center;
+}
+.section__all .section__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(56, 39, 39);
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 2px 2px 7px black;
+}
+.section__all .section__card .card-text {
+  margin: 0 20px;
+  color: white;
+  padding: 20px;
+}
+.section__all .section__card .card-text h3 {
+  padding-bottom: 20px;
+  font-size: 1.6rem;
+}
+.section__all .section__card .card-text p {
+  font-size: 1.2rem;
+}
+.section__all .section__card .card-img {
+  max-width: 400px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  flex-shrink: 1;
+  background-image: url("../img/ja.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+.section__skills {
+  text-align: center;
+  width: 100%;
+}
+.section__skills .section__skills-all {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/jamesmarkosborne-code-1076536_640.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.section__skills .section__skills-all .section__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section__skills .section__skills-all .section__cards .cards-skills {
+  position: relative;
+  margin: 20px;
+  padding: 20px;
+  z-index: 6;
+}
+.section__skills .section__skills-all .section__cards .cards-skills i,
+.section__skills .section__skills-all .section__cards .cards-skills p {
+  color: white;
+}
+.section__skills .section__skills-all .section__cards .cards-skills i {
+  font-size: 70px;
+  margin: 20px;
+}
+.section__skills .section__skills-all .section__cards .cards-skills p {
+  font-size: 1.6rem;
+}
+.section__skills .section__skills-all .section__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+}
+
+.projects {
+  text-align: center;
+}
+.projects .project-center .sect__projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects .project-center .sect__projects .sect__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 20px;
+  background-color: rgb(56, 39, 39);
+  box-shadow: 2px 2px 7px black;
+  border-radius: 10px;
+}
+.projects .project-center .sect__projects .sect__card .sect__img1 {
+  margin: 20px;
+  width: 300px;
+  height: 400px;
+  background-image: url("../img/strona1.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+.projects .project-center .sect__projects .sect__card .sect__img2 {
+  margin: 20px;
+  width: 300px;
+  height: 400px;
+  background-image: url("../img/strona2.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+.projects .project-center .sect__projects .sect__card .sect__text h2,
+.projects .project-center .sect__projects .sect__card .sect__text p {
+  color: white;
+}
+.projects .project-center .sect__projects .sect__card .sect__text h2 {
+  margin: 10px;
+  font-size: 2rem;
+}
+.projects .project-center .sect__projects .sect__card .sect__text p {
+  margin: 10px;
+  font-size: 1.6rem;
+}
+.projects .project-center .sect__projects .sect__card .sect__btn a button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: rgb(105, 105, 211);
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.projects .project-center .sect__projects .sect__card .sect__btn a button:hover {
+  transform: scale(1.1);
+}
+.projects .project-center .sect__projects .sect__card .sect__btn p {
+  margin: 10px;
+  color: rgb(105, 105, 211);
+}
+
+.technologies {
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+}
+.technologies__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.technology-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  padding: 20px;
+  background-color: rgb(56, 39, 39);
+  border-radius: 15px;
+  box-shadow: 2px 2px 7px black;
+  transition: transform 0.3s ease;
+}
+.technology-card i {
+  font-size: 4rem;
+  color: rgb(105, 105, 211);
+  margin-bottom: 10px;
+}
+.technology-card h3 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 10px;
+}
+.technology-card p {
+  font-size: 1.2rem;
+  color: white;
+}
+.technology-card:hover {
+  transform: scale(1.03);
+}
+
+.sect-contact {
+  text-align: center;
+}
+
+.contact {
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+}
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  box-shadow: 2px 2px 7px black;
+}
+.contact .form__group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 5px;
+}
+.contact .form__group label {
+  font-size: 1.5rem;
+  color: white;
+}
+.contact .form__group input,
+.contact .form__group textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  font-family: inherit;
+  outline: none;
+}
+.contact .form__group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+.contact button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(105, 105, 211);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.contact button:hover {
+  transform: scale(1.03);
+}
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  color: white;
+}
+.contact__info h3 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+.contact__info p {
+  max-width: 400px;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+}
+.contact__info a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.contact__info a i {
+  font-size: 2rem;
+}
+.contact__info a:hover {
+  color: rgb(105, 105, 211);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: black;
+}
+
+.footer-container {
+  text-align: center;
+}
+.footer-container p {
+  color: white;
+  font-size: 1.6rem;
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+  .contact__content {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 50px;
+  }
+  .contact__form {
+    flex: 1;
+  }
+  .contact__info {
+    flex: 1;
+  }
+}
+@media (min-width: 768px) {
+  .technologies__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .projects {
+    text-align: center;
+  }
+  .projects .project-center .sect__projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .projects .project-center .sect__projects .sect__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 650px;
+    margin: 20px;
+    background-color: rgb(56, 39, 39);
+    box-shadow: 2px 2px 7px black;
+    border-radius: 10px;
+  }
+  .projects .project-center .sect__projects .sect__card .sect__img {
+    margin: 20px;
+    width: 300px;
+    height: 400px;
+    background-image: url("../img/strona1.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+  }
+  .projects .project-center .sect__projects .sect__card .sect__text h2,
+  .projects .project-center .sect__projects .sect__card .sect__text p {
+    color: white;
+  }
+  .projects .project-center .sect__projects .sect__card .sect__text h2 {
+    margin: 10px;
+    font-size: 2rem;
+  }
+  .projects .project-center .sect__projects .sect__card .sect__text p {
+    margin: 10px;
+    font-size: 1.6rem;
+  }
+  .section__skills {
+    text-align: center;
+    width: 100vw;
+  }
+  .section__skills .section__skills-all {
+    background-image: url(../img/jamesmarkosborne-code-1076536_1280.jpg);
+  }
+  .section__skills .section__skills-all .section__cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .section__skills .section__skills-all .section__cards .cards-skills {
+    transition: transform 0.3s ease;
+  }
+  .section__skills .section__skills-all .section__cards .cards-skills i,
+  .section__skills .section__skills-all .section__cards .cards-skills p {
+    color: white;
+  }
+  .section__skills .section__skills-all .section__cards .cards-skills i {
+    font-size: 70px;
+    margin: 20px;
+  }
+  .section__skills .section__skills-all .section__cards .cards-skills p {
+    font-size: 1.6rem;
+  }
+  .section__skills .section__skills-all .section__cards .cards-skills:hover {
+    transform: scale(1.2);
+  }
+  .section__skills .section__skills-all .section__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 5;
+  }
+  .nav__links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .nav__links .link {
+    background: none;
+    padding: 10px;
+  }
+  .nav__icon {
+    display: none;
+  }
+  .hero__bg {
+    background-image: url("../img/pixelcreatures-design-1210160_1920.jpg");
+  }
+  .section__all .section__card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 90%;
+    max-width: 1000px;
+  }
+  .section__all .section__card .card-text {
+    flex: 1;
+    margin: 0;
+  }
+  .section__all .section__card .card-text h3 {
+    font-size: 2.6rem;
+  }
+  .section__all .section__card .card-text p {
+    font-size: 1.6rem;
+  }
+  .section__all .section__card .card-img {
+    width: 40%;
+    max-width: 400px;
+    flex-shrink: 1;
+  }
+}
+@media (min-width: 1200px) {
+  .section__title {
+    color: rgb(105, 105, 211);
+    font-size: 4rem;
+    margin: 20px 0;
+    text-transform: uppercase;
+  }
+  .hero__arrow {
+    font-size: 8rem;
+  }
+  .hero__bg .hero__text h1 {
+    font-size: 7rem;
+  }
+  .hero__bg .hero__text h2 {
+    font-size: 4rem;
+  }
+  .hero__bg .hero__text p {
+    font-size: 2.6rem;
+  }
+}/*# sourceMappingURL=style.css.map */

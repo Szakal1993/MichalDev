@@ -1,0 +1,784 @@
+@use './animation' as*;
+@use './colors' as*;
+
+html {
+    font-size: 62.5%;
+    scroll-padding-top: 60px;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: $bacgraund-color;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section__title {
+    color: $color-main;
+    font-size: 2.6rem;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 10;
+
+    &__items {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        p {
+            font-size: 2.6rem;
+            font-weight: bold;
+            color: $text-color;
+        }
+    }
+
+    &__logo-icon {
+        font-size: 3.5rem;
+        color: $color-main;
+        padding: 10px;
+    }
+
+
+    &__links {
+        display: none;
+
+        &.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+        }
+
+        .link {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $text-color;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, .8);
+            transition: color .3s;
+            text-align: center;
+        }
+
+        .link:hover {
+            color: $color-main;
+        }
+
+          .link.active-link {
+        color: $color-main;
+    }
+    }
+
+    &__icon {
+        font-size: 30px;
+        padding: 10px;
+        color: $text-color;
+        cursor: pointer;
+    }
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &__shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .5);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    &__arrow {
+        position: absolute;
+        bottom: 10px;
+        color: $text-color;
+        font-size: 36px;
+        padding: 20px;
+        animation: colorChange 5s ease-in-out infinite;
+        z-index: 4;
+    }
+
+    &__bg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-image: url('../img/pixelcreatures-design-1210160_640.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        text-align: center;
+        z-index: 0;
+
+
+
+        .hero__text {
+            z-index: 4;
+
+            h1 {
+                color: $text-color;
+                font-size: 2.6rem;
+                text-shadow: 2px 2px 2px rgb(0, 0, 0);
+            }
+
+            h2 {
+                color: $text-color;
+                font-size: 2rem;
+                text-shadow: 2px 2px 2px rgb(0, 0, 0);
+            }
+
+            p {
+                color: $text-color;
+                font-size: 1.5rem;
+                text-shadow: 2px 2px 2px rgb(0, 0, 0);
+            }
+
+        }
+    }
+
+}
+
+.section {
+    text-align: center;
+
+    &__all {
+        display: flex;
+        justify-content: center;
+
+        .section__card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(56, 39, 39);
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 2px 2px 7px black;
+
+            .card-text {
+                margin: 0 20px;
+                color: $text-color;
+                padding: 20px;
+
+                h3 {
+                    padding-bottom: 20px;
+                    font-size: 1.6rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .card-img {
+                max-width: 400px;
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                flex-shrink: 1;
+                background-image: url('../img/ja.jpg');
+                background-size: cover;
+                background-position: center;
+
+                border-radius: 15px;
+                margin: 20px;
+            }
+        }
+    }
+}
+
+.section__skills {
+    text-align: center;
+    width: 100%;
+
+    .section__skills-all {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/jamesmarkosborne-code-1076536_640.jpg);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+
+        .section__cards {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .cards-skills {
+                position: relative;
+                margin: 20px;
+                padding: 20px;
+                z-index: 6;
+
+                i,
+                p {
+                    color: $text-color;
+                }
+
+                i {
+                    font-size: 70px;
+                    margin: 20px;
+                }
+
+                p {
+                    font-size: 1.6rem;
+                }
+            }
+
+        }
+
+        .section__bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .8);
+            z-index: 5;
+        }
+    }
+}
+
+
+.projects {
+    text-align: center;
+
+    .project-center {
+
+        .sect__projects {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .sect__card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 90%;
+                margin: 20px;
+                background-color: rgb(56, 39, 39);
+                box-shadow: 2px 2px 7px black;
+                border-radius: 10px;
+
+                .sect__img1 {
+                    margin: 20px;
+                    width: 300px;
+                    height: 400px;
+
+                    background-image: url('../img/strona1.png');
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+
+                    border-radius: 15px;
+                }
+
+                .sect__img2 {
+                    margin: 20px;
+                    width: 300px;
+                    height: 400px;
+
+                    background-image: url('../img/strona2.png');
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+
+                    border-radius: 15px;
+                }
+
+                .sect__text {
+
+                    h2,
+                    p {
+                        color: $text-color;
+                    }
+
+                    h2 {
+                        margin: 10px;
+                        font-size: 2rem;
+                    }
+
+                    p {
+                        margin: 10px;
+                        font-size: 1.6rem;
+                    }
+                }
+
+                .sect__btn {
+                    a {
+
+                        button {
+                            padding: 10px 20px;
+                            cursor: pointer;
+                            background-color: $color-main;
+                            border: none;
+                            border-radius: 10px;
+                            transition: transform .3s ease;
+                        }
+
+                        button:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    p {
+                        margin: 10px;
+                        color: $color-main;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.technologies {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
+.technology-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 160px;
+    padding: 20px;
+
+    background-color: rgb(56, 39, 39);
+    border-radius: 15px;
+    box-shadow: 2px 2px 7px black;
+
+    transition: transform .3s ease;
+
+    i {
+        font-size: 4rem;
+        color: $color-main;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        color: $text-color;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: $text-color;
+    }
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+
+.sect-contact {
+    text-align: center;
+
+}
+
+.contact {
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px;
+
+        background-color: rgba(0, 0, 0, .25);
+        border-radius: 15px;
+        box-shadow: 2px 2px 7px black;
+    }
+
+    .form__group {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 5px;
+
+        label {
+            font-size: 1.5rem;
+            color: $text-color;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.4rem;
+            font-family: inherit;
+            outline: none;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+    }
+
+    button {
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+
+        background-color: $color-main;
+        color: white;
+
+        font-size: 1.5rem;
+        cursor: pointer;
+
+        transition: transform .3s ease;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 25px;
+
+        color: $text-color;
+
+        h3 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            max-width: 400px;
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            margin: 8px 0;
+
+            color: $text-color;
+            font-size: 1.5rem;
+            text-decoration: none;
+
+            transition: color .3s;
+
+            i {
+                font-size: 2rem;
+            }
+
+            &:hover {
+                color: $color-main;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+}
+
+.footer-container {
+    text-align: center;
+    p {
+        color: $text-color;
+        font-size: 1.6rem;
+    }
+}
+
+
+@media (min-width: 768px) {
+
+    @media (min-width: 768px) {
+
+        .contact {
+
+            &__content {
+                flex-direction: row;
+                align-items: stretch;
+                gap: 50px;
+            }
+
+            &__form {
+                flex: 1;
+            }
+
+            &__info {
+                flex: 1;
+            }
+        }
+    }
+
+    .technologies__cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .projects {
+        text-align: center;
+
+        .project-center {
+
+            .sect__projects {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                .sect__card {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 90%;
+                    height: 650px;
+                    margin: 20px;
+                    background-color: rgb(56, 39, 39);
+                    box-shadow: 2px 2px 7px black;
+                    border-radius: 10px;
+
+                    .sect__img {
+                        margin: 20px;
+                        width: 300px;
+                        height: 400px;
+
+                        background-image: url('../img/strona1.png');
+                        background-size: contain;
+                        background-position: center;
+                        background-repeat: no-repeat;
+
+                        border-radius: 15px;
+                    }
+
+                    .sect__text {
+
+                        h2,
+                        p {
+                            color: $text-color;
+                        }
+
+                        h2 {
+                            margin: 10px;
+                            font-size: 2rem;
+                        }
+
+                        p {
+                            margin: 10px;
+                            font-size: 1.6rem;
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+    }
+
+    .section__skills {
+        text-align: center;
+        width: 100vw;
+
+        .section__skills-all {
+            background-image: url(../img/jamesmarkosborne-code-1076536_1280.jpg);
+
+            .section__cards {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                .cards-skills {
+                    transition: transform .3s ease;
+
+                    i,
+                    p {
+                        color: $text-color;
+                    }
+
+                    i {
+                        font-size: 70px;
+                        margin: 20px;
+                    }
+
+                    p {
+                        font-size: 1.6rem;
+                    }
+                }
+
+                .cards-skills:hover {
+                    transform: scale(1.2);
+                }
+            }
+
+            .section__bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, .8);
+                z-index: 5;
+            }
+        }
+    }
+
+    .nav {
+
+        &__links {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+            .link {
+                background: none;
+                padding: 10px;
+            }
+        }
+
+        &__icon {
+            display: none;
+        }
+    }
+
+    .hero {
+        &__bg {
+            background-image: url('../img/pixelcreatures-design-1210160_1920.jpg');
+
+        }
+    }
+
+    .section__all {
+        .section__card {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            width: 90%;
+            max-width: 1000px;
+
+
+            .card-text {
+                flex: 1;
+                margin: 0;
+
+                h3 {
+                    font-size: 2.6rem;
+                }
+
+                p {
+                    font-size: 1.6rem;
+                }
+            }
+
+            .card-img {
+                width: 40%;
+                max-width: 400px;
+                flex-shrink: 1;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1200px) {
+
+    .section__title {
+        color: $color-main;
+        font-size: 4rem;
+        margin: 20px 0;
+        text-transform: uppercase;
+    }
+
+    .hero {
+        &__arrow {
+            font-size: 8rem;
+        }
+
+        &__bg {
+            .hero__text {
+
+
+                h1 {
+                    font-size: 7rem;
+
+                }
+
+                h2 {
+                    font-size: 4rem;
+                }
+
+                p {
+                    font-size: 2.6rem;
+                }
+
+            }
+        }
+    }
+}
