@@ -172,9 +172,9 @@ body {
   align-items: center;
   background-color: rgb(56, 39, 39);
   width: 90%;
-  max-width: 500px;
   box-shadow: 2px 2px 7px black;
   padding: 10px;
+  border-radius: 10px;
 }
 .section__all .section__card .card-text {
   margin: 0 20px;
@@ -577,8 +577,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-    width: 90%;
-    max-width: 1000px;
+    width: 95%;
   }
   .section__all .section__card .card-text {
     flex: 1;
