@@ -524,7 +524,7 @@ footer {
     width: 100vw;
   }
   .section__skills .section__skills-all {
-    background-image: url(../img/jamesmarkosborne-code-1076536_1280.jpg);
+    background-image: url("../img/jamesmarkosborne-code-1076536_1280.jpg");
   }
   .section__skills .section__skills-all .section__cards {
     display: flex;
