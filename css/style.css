@@ -313,7 +313,6 @@ body {
 .technologies {
   width: 100%;
   text-align: center;
-  padding: 40px 0;
 }
 .technologies__cards {
   display: grid;
@@ -358,7 +357,6 @@ body {
 
 .contact {
   width: 100%;
-  padding: 40px 0;
   text-align: center;
 }
 .contact__content {
@@ -464,7 +462,7 @@ footer {
   font-size: 1.6rem;
 }
 
-@media (min-width: 768px) and (min-width: 768px) {
+@media (min-width: 768px) {
   .contact__content {
     flex-direction: row;
     align-items: stretch;
@@ -476,8 +474,6 @@ footer {
   .contact__info {
     flex: 1;
   }
-}
-@media (min-width: 768px) {
   .technologies__cards {
     grid-template-columns: repeat(3, 1fr);
   }

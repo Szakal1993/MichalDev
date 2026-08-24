@@ -373,7 +373,6 @@ body {
 .technologies {
     width: 100%;
     text-align: center;
-    padding: 40px 0;
 
     &__cards {
         display: grid;
@@ -427,7 +426,6 @@ body {
 
 .contact {
     width: 100%;
-    padding: 40px 0;
     text-align: center;
 
     &__content {
@@ -559,8 +557,7 @@ footer {
 
 @media (min-width: 768px) {
 
-    @media (min-width: 768px) {
-
+    
         .contact {
 
             &__content {
@@ -577,7 +574,7 @@ footer {
                 flex: 1;
             }
         }
-    }
+    
 
     .technologies__cards {
         grid-template-columns: repeat(3, 1fr);
