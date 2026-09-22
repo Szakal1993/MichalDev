@@ -190,21 +190,22 @@
 
     <div class="wrapper contact__content">
 
-        <form class="contact__form">
+        <form class="contact__form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="cd43439c-510b-4fc0-8c73-21d3bbb60020">
 
             <div class="form__group">
                 <label for="name">Imię</label>
-                <input type="text" id="name" name="name" placeholder="Twoje imię">
+                <input type="text" id="name" name="name" placeholder="Twoje imię" required>
             </div>
 
             <div class="form__group">
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="Twój e-mail">
+                <input type="email" id="email" name="email" placeholder="Twój e-mail" required>
             </div>
 
             <div class="form__group">
                 <label for="message">Wiadomość</label>
-                <textarea id="message" name="message" placeholder="Napisz wiadomość..."></textarea>
+                <textarea id="message" name="message" placeholder="Napisz wiadomość..." required></textarea>
             </div>
 
             <button type="submit">Wyślij wiadomość</button>
