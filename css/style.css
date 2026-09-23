@@ -283,6 +283,16 @@ body {
   background-repeat: no-repeat;
   border-radius: 15px;
 }
+.projects .project-center .sect__projects .sect__card .sect__img3 {
+  margin: 20px;
+  width: 300px;
+  height: 400px;
+  background-image: url("../img/ss.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
 .projects .project-center .sect__projects .sect__card .sect__text h2,
 .projects .project-center .sect__projects .sect__card .sect__text p {
   color: white;
