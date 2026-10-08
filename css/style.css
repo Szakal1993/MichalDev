@@ -254,6 +254,7 @@ body {
   align-items: center;
 }
 .projects .project-center .sect__projects .sect__card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -308,6 +309,15 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+.projects .project-center .sect__projects .sect__card .sect__img6 {
+  margin: 20px;
+  width: 90%;
+  height: 400px;
+  background-image: url("../img/szakal1993.github.io_detailing_.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .projects .project-center .sect__projects .sect__card .sect__text h2,
 .projects .project-center .sect__projects .sect__card .sect__text p {
   color: white;
@@ -319,6 +329,10 @@ body {
 .projects .project-center .sect__projects .sect__card .sect__text p {
   margin: 10px;
   font-size: 1.6rem;
+}
+.projects .project-center .sect__projects .sect__card .sect__btn {
+  position: absolute;
+  bottom: 20px;
 }
 .projects .project-center .sect__projects .sect__card .sect__btn a button {
   padding: 10px 20px;
